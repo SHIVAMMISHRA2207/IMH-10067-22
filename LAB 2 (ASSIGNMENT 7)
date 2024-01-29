@@ -1,0 +1,57 @@
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+
+public class DivideAndCheckDuplicates {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the position to divide the array: ");
+        int position = scanner.nextInt();
+
+        int[] originalArray = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] firstPart = new int[position];
+        int[] secondPart = new int[originalArray.length - position];
+
+        for (int i = 0; i < position; i++) {
+            firstPart[i] = originalArray[i];
+        }
+
+        for (int i = position, j = 0; i < originalArray.length; i++, j++) {
+            secondPart[j] = originalArray[i];
+        }
+
+        System.out.println("Original array elements:");
+        for (int num : originalArray) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println("\nFirst part of the array:");
+        for (int num : firstPart) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println("\nSecond part of the array:");
+        for (int num : secondPart) {
+            System.out.print(num + " ");
+        }
+
+        checkAndDisplayDuplicates(originalArray);
+    }
+
+    private static void checkAndDisplayDuplicates(int[] array) {
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
+
+        for (int num : array) {
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }
+
+        System.out.println("\nDuplicate elements and their frequency of occurrence:");
+
+        for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            if (entry.getValue() > 1) {
+                System.out.println("Element: " + entry.getKey() + ", Frequency: " + entry.getValue());
+            }
+        }
+    }
+}
