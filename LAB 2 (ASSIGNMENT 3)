@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class DeletionExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int n = scanner.nextInt();
+
+        System.out.print("Enter the total number of elements in the array: ");
+        int totalElements = scanner.nextInt();
+
+        int[] myArray = new int[n];
+
+        System.out.println("Enter the elements of the array:");
+
+        for (int i = 0; i < totalElements; i++) {
+            System.out.print("Element " + (i + 1) + ": ");
+            myArray[i] = scanner.nextInt();
+        }
+
+        System.out.println("The array elements are:");
+
+        for (int i = 0; i < totalElements; i++) {
+            System.out.print(myArray[i] + " ");
+        }
+
+        System.out.print("\nEnter the index position to delete the element: ");
+        int loc = scanner.nextInt();
+
+        if (loc >= 1 && loc <= totalElements) {
+            for (int i = loc - 1; i < totalElements - 1; i++) {
+                myArray[i] = myArray[i + 1];
+            }
+
+            totalElements--;
+
+            System.out.println("Array after deletion:");
+
+            for (int i = 0; i < totalElements; i++) {
+                System.out.print(myArray[i] + " ");
+            }
+        } else {
+            System.out.println("Invalid index position for deletion.");
+        }
+
+        scanner.close();
+    }
+}
