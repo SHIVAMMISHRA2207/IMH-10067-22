@@ -1,0 +1,21 @@
+public class AnonymousArrayExample {
+    public static void main(String[] args) {
+        findSumAndDisplayReverse(new int[]{3, 7, 12, 5, 8});
+    }
+
+    public static void findSumAndDisplayReverse(int[] array) {
+        int sum = 0;
+
+        for (int num : array) {
+            sum += num;
+        }
+
+        System.out.println("Sum of the values: " + sum);
+
+        System.out.println("Values in reverse order:");
+
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.print(array[i] + " ");
+        }
+    }
+}
