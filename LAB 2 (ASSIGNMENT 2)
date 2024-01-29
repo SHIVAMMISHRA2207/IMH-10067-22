@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class InsertionExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int sizeOfArray = scanner.nextInt();
+
+        int[] myArray = new int[sizeOfArray];
+
+        System.out.println("Enter the elements of the array:");
+
+        for (int i = 0; i < sizeOfArray; i++) {
+            System.out.print("Element " + (i + 1) + ": ");
+            myArray[i] = scanner.nextInt();
+        }
+
+        System.out.println("The array elements are:");
+
+        for (int i = 0; i < sizeOfArray; i++) {
+            System.out.print(myArray[i] + " ");
+        }
+
+        System.out.print("\nEnter the position to insert the element: ");
+        int position = scanner.nextInt();
+
+        System.out.print("Enter the element to be inserted: ");
+        int element = scanner.nextInt();
+
+        if (position >= 1 && position <= sizeOfArray + 1) {
+            int[] newArray = new int[sizeOfArray + 1];
+
+            for (int i = 0, j = 0; i < newArray.length; i++) {
+                if (i == position - 1) {
+                    newArray[i] = element;
+                } else {
+                    newArray[i] = myArray[j];
+                    j++;
+                }
+            }
+
+            System.out.println("Array after insertion:");
+
+            for (int i = 0; i < newArray.length; i++) {
+                System.out.print(newArray[i] + " ");
+            }
+        } else {
+            System.out.println("Invalid position for insertion.");
+        }
+
+        scanner.close();
+    }
+}
