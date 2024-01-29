@@ -1,0 +1,45 @@
+public class VariableLengthArgumentExample {
+    public static void main(String[] args) {
+        displayTotalArguments(1, 2, 3, 4, 5);
+        
+        calculateMax(10, 5, 8, 15, 2);
+
+        calculateSum(2.5, 3, 7, 1.5, 4);
+
+        checkVariableLengthArgument("Hello", 5, true, 3.14);
+    }
+
+    public static void displayTotalArguments(int... numbers) {
+        System.out.println("Total number of arguments: " + numbers.length);
+    }
+
+    public static void calculateMax(int... numbers) {
+        int max = Integer.MIN_VALUE;
+
+        for (int num : numbers) {
+            if (num > max) {
+                max = num;
+            }
+        }
+
+        System.out.println("Maximum value in the list: " + max);
+    }
+
+    public static void calculateSum(double... numbers) {
+        double sum = 0;
+
+        for (double num : numbers) {
+            sum += num;
+        }
+
+        System.out.println("Sum of all elements in the list: " + sum);
+    }
+
+    public static void checkVariableLengthArgument(Object... args) {
+        System.out.println("Variable Length Arguments:");
+
+        for (Object arg : args) {
+            System.out.println(arg.getClass().getSimpleName() + ": " + arg);
+        }
+    }
+}
