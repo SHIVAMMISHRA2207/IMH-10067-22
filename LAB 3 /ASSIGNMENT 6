@@ -1,0 +1,36 @@
+public class TypePromotionDemo {
+
+    static void display(int a) {
+        System.out.println("Integer value: " + a);
+    }
+
+    static void display(double b) {
+        System.out.println("Double value: " + b);
+    }
+
+    static void display(float c) {
+        System.out.println("Float value: " + c);
+    }
+
+    static void display(long d) {
+        System.out.println("Long value: " + d);
+    }
+
+    static void display(String e) {
+        System.out.println("String value: " + e);
+    }
+
+    public static void main(String[] args) {
+        int intValue = 10;
+        double doubleValue = 15.5;
+        float floatValue = 20.3f;
+        long longValue = 1234567890L;
+        String stringValue = "Hello, Type Promotion!";
+
+        display(intValue);
+        display(doubleValue);
+        display(floatValue);
+        display(longValue);
+        display(stringValue);
+    }
+}
