@@ -1,17 +1,16 @@
-
-public class main {
-    public static void Meathod1(int x){
-        if(x<0)
-            throw new IllegalArgumentException("age cannot be less than 0");
+public class Main {
+    public static void method1(int x) {
+        if (x < 0)
+            throw new IllegalArgumentException("Age cannot be less than 0");
         else
-            System.out.println("Age is "+x);
-    } 
+            System.out.println("Age is " + x);
+    }
+
     public static void main(String[] args) {
-        try{
-            Meathod1(-15);
-        }
-        catch(IllegalArgumentException e){
-            throw new RuntimeException("it may generaqte Runtime Exception "+e.getMessage());
+        try {
+            method1(-15);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Caught IllegalArgumentException: " + e.getMessage());
         }
     }
 }
