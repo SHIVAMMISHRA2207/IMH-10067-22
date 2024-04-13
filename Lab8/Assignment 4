@@ -1,0 +1,29 @@
+import java.util.*;
+interface Person{
+    int x=13;
+    void Name();
+    void Company();
+}
+class Employee implements Person{
+    String s;
+    public void Name(){
+        System.out.println("Employee Name:"+s);
+    } 
+    public void Company(){
+        System.out.println(s+ " is working in Google India");
+    }
+     
+
+}
+public class main {
+    public static void main(String[] args) { 
+        Scanner sc=new Scanner(System.in);
+        Employee obj=new Employee();
+        System.out.println("Enter Employee Name");
+        obj.s=sc.next();
+        obj.Name();
+        obj.Company();
+        
+        
+    }
+}
