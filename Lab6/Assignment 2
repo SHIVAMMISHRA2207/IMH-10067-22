@@ -1,0 +1,50 @@
+
+
+import java.util.*;
+class student1{
+    String student_name;
+    int student_roll;
+    int student_fee;
+    
+    student1(String student_name,int student_roll,int student_fee){
+      
+        this.student_name=student_name;
+        this.student_fee=student_fee;
+        this.student_roll=student_roll;
+    }
+    student1(){
+        
+        this("Hero",1,0);
+    }
+    void show(Object o ){
+        display(this);
+    }
+     
+    void display(Object o){
+        System.out.println("student  name:"+this.student_name);
+        System.out.println("student  roll:"+this.student_roll);
+        System.out.println("student  fee:"+this.student_fee);
+       
+    }
+    
+        
+}
+public class main {
+    public static void main(String[] args) {
+        String s1;
+        int r1;
+        int f1;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter Student1 name:");
+        s1=sc.nextLine();
+        System.out.println("Enter roll:");
+        r1=sc.nextInt();
+        System.out.println("Enter Fee");
+        f1=sc.nextInt();
+        student1 obj2=new student1();
+        student1 obj1=new student1(s1,r1,f1);
+        obj1.show(obj1);
+        obj2.show(obj2);
+        
+    }
+}
