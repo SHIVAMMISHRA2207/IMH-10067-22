@@ -1,0 +1,26 @@
+class Bird{
+    void fly(){
+        System.out.println("Bird can fly");
+    }    
+}
+class Parrot extends Bird{
+    void showColor(){
+        System.out.println(" Green color Bird");
+    }
+}
+class Crow extends Bird{
+    void showColor(){
+        System.out.println(" Black color Bird");
+    }
+} 
+public class main {
+    public static void main(String[] args) {
+        Parrot t=new Parrot();
+        t.fly();
+        t.showColor();
+        Crow c=new Crow();
+        t.fly();
+        c.showColor();
+    }
+    
+}
