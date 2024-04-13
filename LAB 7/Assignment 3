@@ -1,0 +1,39 @@
+
+import java.util.*;
+class Rectangle1{
+    int length;
+    int breadth;
+    Rectangle1(){
+        length=1;
+        breadth=1;
+    }
+    Rectangle1(int l,int b){
+        length=l;
+        breadth=b;
+    
+    }
+}  
+class Cuboid extends Rectangle1{
+    int height;
+    Cuboid(){
+        height=1;
+    }
+    Cuboid(int h){
+        height=h;
+    }
+    int volume(){
+        return length*breadth*height;
+    }
+}
+public class main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Cuboid obj1=new Cuboid();
+        System.out.println("Volume :"+obj1.volume());
+        System.out.println("Enter the height :");
+        int h=sc.nextInt();
+        Cuboid obj2=new Cuboid(h);
+        System.out.println("Volume :"+obj2.volume());
+        
+    }
+}
