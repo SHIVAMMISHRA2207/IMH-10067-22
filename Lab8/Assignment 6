@@ -1,0 +1,56 @@
+
+abstract class Phone{ 
+    abstract void call();
+    abstract void sms();
+} 
+interface Camera{
+    void click();
+    void record();
+} 
+interface MusicPlayer{
+    void play();
+    void pause();
+    void stop();
+} 
+class Smartphone  extends Phone implements Camera,MusicPlayer{
+    void call(){
+        System.out.println("In phone do Calling");
+    } 
+    void sms(){
+        System.out.println("In phone do sms");
+    } 
+    public void click(){
+        System.out.println("In camera click");
+    } 
+    public void record(){
+        System.out.println("In camer Record");
+    } 
+    public void play(){
+        System.out.println("In MusicPlayer play");
+    } 
+    public void pause(){
+        System.out.println("In MusicPlayer pause");
+    } 
+    
+    @Override
+    public void stop(){
+        System.out.println("In MusicPlayer atop");
+    }
+
+
+}
+public class main {
+    public static void main(String[] args) {
+        Smartphone s=new Smartphone();
+        Phone P=s;
+        P.call();
+        P.sms();
+        Camera C=s;
+        C.click();
+        C.record();
+        MusicPlayer M=s;
+        M.play();
+        M.pause();
+        M.stop();
+    }
+}
