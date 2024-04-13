@@ -1,0 +1,13 @@
+class Outer{
+    class Inner{
+        void display(){
+            System.out.println("Inside display Inner");
+        }
+    }
+}
+public class main {
+    public static void main(String[] args) {
+        Outer.Inner in =new Outer().new Inner();
+        in.display();
+    }
+}
