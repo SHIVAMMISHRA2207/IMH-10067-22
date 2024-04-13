@@ -1,0 +1,22 @@
+
+interface Test{
+    int x=10;
+    default  void method1(){ 
+        System.out.println("In test1 in meathod1");
+    }
+    static void method2(){
+         System.out.println("In test1 in meathod2");
+     } 
+} 
+class Test2 implements Test{
+    
+}
+
+public class main {
+    public static void main(String[] args) {
+        Test.method2();
+        Test2 t=new Test2();
+        t.method1();
+        
+    }
+}
