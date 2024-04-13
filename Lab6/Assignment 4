@@ -1,0 +1,50 @@
+
+import java.util.Scanner;
+class student2{
+    String student_name;
+    int student_roll;
+    int student_fee;
+    
+    student2(String student_name,int student_roll,int student_fee){
+      
+        this.student_name=student_name;
+        this.student_fee=student_fee;
+        this.student_roll=student_roll;
+    }
+    student2(){
+        
+        this("Hero",1,0);
+        
+    }
+     
+//    void display(Object o){
+//        System.out.println("student  name:"+this.student_name);
+//        System.out.println("student  roll:"+this.student_roll);
+//        System.out.println("student  fee:"+this.student_fee);
+//       
+//    }
+    public Object  pass(Object o){
+        return  this;
+    }
+    
+        
+}
+public class main {
+     public static void main(String[] args) {
+        String s1;
+        int r1;
+        int f1;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter Student1 name:");
+        s1=sc.nextLine();
+        System.out.println("Enter roll:");
+        r1=sc.nextInt();
+        System.out.println("Enter Fee");
+        f1=sc.nextInt();
+        student2 obj2=new student2();
+        student2 obj1=new student2(s1,r1,f1);
+        System.out.println(obj1.pass(obj1));
+        System.out.println(obj2.pass(obj2));
+    }
+    
+}
