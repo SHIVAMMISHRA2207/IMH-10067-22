@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class PrintNumber{
+    
+    PrintNumber(Integer n, Float f, Double h){
+        System.out.println("Wrapper Class Printing");
+        System.out.println("Integer " + n);
+        System.out.println("Float " + f);
+        System.out.println("Double " + h);
+    }    
+    
+}
+
+public class Question {
+    public static void main(String[] args) {
+        int n;
+        double h;
+        float f;
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        n = sc.nextInt();
+        System.out.print("Enter a double: ");
+        h = sc.nextDouble();
+        System.out.print("Enter a float: ");
+        f = sc.nextFloat();
+        
+        Integer num = n;
+        Float k = f;
+        Double y = h;
+        
+        PrintNumber obj1 = new PrintNumber(num, k, y);
+    }
+}
