@@ -1,0 +1,21 @@
+import java.util.*;
+class MyWrapper_Class{
+    private int i;
+    MyWrapper_Class(int j){
+        i=j;
+    }
+    public int intValue(){
+        return i+10;
+    }
+}
+public class main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter n:");
+        int n=sc.nextInt();
+        MyWrapper_Class obj1=new MyWrapper_Class(n);
+        System.out.println("My wrapper Class Output");
+        System.out.println(obj1.intValue());
+        
+    }
+}
