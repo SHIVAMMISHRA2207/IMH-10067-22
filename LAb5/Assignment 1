@@ -1,0 +1,47 @@
+import java.util.ArrayList; 
+import java.util.Arrays; 
+import java.util.*; 
+class inventory{
+    String name; 
+    int rating; 
+    int quantity; 
+    
+    void displayname(){
+        System.out.println(this.name);
+        System.out.println(this.rating); 
+        System.out.println(this.quantity);
+    }
+    void addquantity(int x){
+        if(this.quantity+x<=100){
+         this.quantity = this.quantity + x;   
+        }
+        else{
+            System.out.println("please reduce the amount for" +" " + this.name + " " + "and try again");
+        }
+    }
+    void changerating(int y){
+        this.rating = y; 
+    }
+
+    inventory(String name,int rating,int quantity){
+        this.name = name; 
+        this.rating = rating; 
+        this.quantity = quantity; 
+    }
+}
+public class Lab5 {
+
+   
+    public static void main(String[] args) {
+     
+        inventory ob1 = new inventory("Haldiram",7,55);
+        inventory ob2 = new inventory("Bikaji",9,40); 
+        inventory ob3 = new inventory("Bikano",5,40); 
+        ob1.addquantity(5); 
+        ob2.addquantity(65); 
+        ob3.changerating(9); 
+        ob1.displayname(); 
+        ob2.displayname();
+        ob3.displayname(); 
+    }
+}
