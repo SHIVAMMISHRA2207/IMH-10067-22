@@ -1,0 +1,18 @@
+class Parents{
+    void showParent(){
+        System.out.println("hi I am a parent ");
+    }    
+}  
+class Child extends Parents{
+    void showChild(){
+        System.out.println("Hi I am a Child");
+    }
+}    
+public class  {
+    public static void main(String[] args) {
+        Child  t=new Child();
+        t.showChild();
+        t.showParent();
+    }
+    
+}
