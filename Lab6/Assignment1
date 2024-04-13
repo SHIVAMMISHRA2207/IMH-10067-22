@@ -1,0 +1,45 @@
+]import java.util.*;
+class student{
+    String student_name;
+    int student_roll;
+    int student_fee;
+    student(String student_name,int student_roll,int student_fee){
+        this.student_name=student_name;
+        this.student_fee=student_fee;
+        this.student_roll=student_roll;
+    }
+    void display(){
+        System.out.println("student  name:"+this.student_name);
+        System.out.println("student  roll:"+this.student_roll);
+        System.out.println("student  fee:"+this.student_fee);
+       
+    }
+}    
+public class q1 {
+    public static void main(String[] args) {
+        String s1,s2;
+        int r1,r2;
+        int f1,f2;
+        
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter Student1 name:");
+        s1=sc.nextLine();
+        System.out.println("Enter roll:");
+        r1=sc.nextInt();
+        System.out.println("Enter Fee");
+        f1=sc.nextInt();
+        System.out.println("Enter Student2 name:");
+        s2=sc.next();
+        System.out.println("Enter roll:");
+        r2=sc.nextInt();
+        System.out.println("Enter Fee");
+        f2=sc.nextInt();
+        student obj1=new student(s1,r1,f1);
+        student obj2=new student(s2,r2,f2);
+        System.out.println("Student 1 details");
+        obj1.display();
+        System.out.println("Student 2 details");
+        obj2.display();
+    }
+    
+}
