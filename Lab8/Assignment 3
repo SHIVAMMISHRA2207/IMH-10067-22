@@ -1,0 +1,42 @@
+import java.util.*;
+abstract class Shape{
+      abstract void  perimeter();
+      abstract void area();
+}
+class Circle extends Shape{
+    int r;
+    void area(){
+        System.out.println("Circle area  : "+3.14*r*r);
+    }
+    void perimeter(){
+        System.out.println("Circle Perimeter : "+2*3.14*r);
+    }
+}
+class Rectangle extends Shape{
+    int length;
+    int breadth;
+    void perimeter(){
+        System.out.println("Rectangle Perimeter :"+2*(length+breadth));
+    }
+    void area(){
+        System.out.println("Rectangle area :"+length*breadth);
+    }
+}
+public class main {
+    public static void main(String[] args){ 
+        Scanner sc=new Scanner(System.in);
+        Rectangle obj1=new Rectangle();
+        System.out.println("Entet length of Rectangle:");
+        obj1.length=sc.nextInt();
+        System.out.println("Enter breadth of Rectangle");
+        obj1.breadth=sc.nextInt();
+        obj1.area();
+        obj1.perimeter();
+        Circle obj2=new Circle();
+        System.out.println("Enter Radius of Circle");
+        obj2.r=sc.nextInt();
+        obj2.area();
+        obj2.perimeter();
+        
+    }
+}
