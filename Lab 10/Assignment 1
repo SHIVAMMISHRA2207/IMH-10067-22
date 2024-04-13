@@ -1,0 +1,15 @@
+
+public class main {
+    public void finalize(){
+        System.out.println("Object collected");
+    }
+    public static void main(String[] args) {
+       q1 m1=new q1();
+       q1 m2=new q1();
+       //m1=m2;
+       
+       m1=null;
+       m2=null;
+       System.gc();
+    }
+}
